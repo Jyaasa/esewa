@@ -1,4 +1,3 @@
-require 'rest-client'
 module Esewa
   class Payment < Base
     attr_accessor :url, :service_type, :amount, :txtAmt, :total_amount, :service_charge, :delivery_charge,  :success_url, :failure_url

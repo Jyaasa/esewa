@@ -1,4 +1,4 @@
-require 'rest-client'
+# require 'rest-client'
 module Esewa
   class Base
     attr_accessor :service_code, :product_id

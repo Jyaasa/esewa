@@ -2,7 +2,7 @@ module Esewa
   class Payment < Base
     attr_accessor :url, :service_type, :amount, :txtAmt, :total_amount, :service_charge, :delivery_charge,  :success_url, :failure_url
 
-    def initialize(service_type="demo", amount=0, txtAmt=0, service_charge=0, delivery_charge=0, success_url='', failure_url='')
+    def set_data(service_type="demo", amount=0, txtAmt=0, service_charge=0, delivery_charge=0, success_url='', failure_url='')
       @service_type = service_type
       @amount = amount
       @txtAmt = txtAmt

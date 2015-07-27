@@ -15,11 +15,10 @@ module Esewa
     def payment
       calculate_total_amount
       get_url
-      response = RestClient.post( @url, tAmt: @total_amount, amt: @amount, txtAmt: @txtAmt, psc: @service_charge, pdc: @delivery_charge, scd: @service_code, pid: @product_id, su: @success_url, fu: @failure_url) do |response, request, result, &block|
-        puts response
+      response = RestClient.post( @url, tAmt: @total_amount, amt: @amount, txAmt: @txtAmt, psc: @service_charge, pdc: @delivery_charge, scd: @service_code, pid: @product_id, su: @success_url, fu: @failure_url) do |response, request, result, &block|
         if [301, 302, 307].include? response.code
-          redirected_url = response.headers[:location]
-          return redirected_url
+          response_header = response.headers
+          return response_header
         else
           response.return!(request, result, &block)
           return ''

@@ -1,6 +1,6 @@
 # Esewa
 
-esewa is the gem to integrate Esewa, online payment gateway of Nepal.
+esewa is the gem to integrate Esewa, online payment gateway of Nepal to Rails application.
 
 ## Installation
 
